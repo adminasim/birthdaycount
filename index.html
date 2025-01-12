@@ -13,7 +13,7 @@ p {
 </head>
 <body>
 
-<p id="demo"></p>
+<p id="demo" class="box"></p>
 
 <script>
 // Set the date we're counting down to
@@ -41,7 +41,8 @@ var x = setInterval(function() {
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("demo").innerHTML = "Happy Birthday";
+     window.location.href = "https://adminasim.github.io/birthday4u-codernasim/";
   }
 }, 1000);
 </script>
