@@ -3,21 +3,42 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+  body{
+    background-image: url("image/background-img.jpg");
+    background-size: cover;
+  }
+  .box{
+    position:absolute;
+    top:40%;
+    left:30%;
+    margin-top:-50px; /* this is half the height of your div*/  
+    margin-left: -50px; /*this is half of width of your div*/
+    background-image: url("image/background-img-2.jpg");
+    background-size: cover;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px 5px gray;
+}
 p {
   text-align: center;
-  font-size: 60px;
+  font-size: 80px;
+  font-weight: bold;
   margin-top: 0px;
-  color: red;
+  color: darkgrey;
+  margin: auto;
 }
 </style>
 </head>
 <body>
+<div class="box">
+<p id="demo"></p>
+</div>
 
-<p id="demo" class="box"></p>
+
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 12, 2025 21:40:25").getTime();
+var countDownDate = new Date("Jan 23, 2025 00:00:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -36,13 +57,13 @@ var x = setInterval(function() {
     
   // Output the result in an element with id="demo"
   document.getElementById("demo").innerHTML = days + " : " + hours + " : "
-  + minutes + " : " + seconds + " ";
+  + minutes + " : " + seconds + "" + "<br>Wait Dear💖";
     
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "Happy Birthday";
-     window.location.href = "https://adminasim.github.io/birthday4u-codernasim/";
+    window.location.href = "https://adminasim.github.io/birthday4u-codernasim/";
   }
 }, 1000);
 </script>
